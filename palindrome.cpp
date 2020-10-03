@@ -18,4 +18,5 @@ int main(){
     int rev;
     rev=reverse_digit(n);
     (rev==n)? cout << "It's palindrome\n": cout << "It's not a palindrome\n";
+    return 0;
 }
