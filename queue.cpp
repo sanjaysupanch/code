@@ -1,60 +1,36 @@
-
-import java.util.Deque; 
-import java.util.HashSet; 
-import java.util.LinkedList; 
-import java.util.Iterator; 
-
-public class LRUCache { 
-
-	// store keys of cache 
-	private Deque<Integer> doublyQueue; 
-
-	// store references of key in cache 
-	private HashSet<Integer> hashSet; 
-
-	// maximum capacity of cache 
-	private final int CACHE_SIZE; 
-
-	LRUCache(int capacity) { 
-		doublyQueue = new LinkedList<>(); 
-		hashSet = new HashSet<>(); 
-		CACHE_SIZE = capacity; 
-	} 
-
-
-	public void refer(int page) { 
-		if (!hashSet.contains(page)) { 
-			if (doublyQueue.size() == CACHE_SIZE) { 
-				int last = doublyQueue.removeLast(); 
-				hashSet.remove(last); 
-			} 
-		} 
-		else {
-			doublyQueue.remove(page); 
-		} 
-		doublyQueue.push(page); 
-		hashSet.add(page); 
-	} 
-
-	// display contents of cache 
-	public void display() { 
-		Iterator<Integer> itr = doublyQueue.iterator(); 
-		while (itr.hasNext()) { 
-			System.out.print(itr.next() + " "); 
-		} 
-	} 
-
-	public static void main(String[] args) { 
-		LRUCache cache = new LRUCache(4); 
-		cache.refer(1); 
-		cache.refer(2); 
-		cache.refer(3); 
-		cache.refer(1); 
-		cache.refer(4); 
-		cache.refer(5); 
-		cache.refer(2); 
-		cache.refer(2); 
-		cache.refer(1); 
-		cache.display(); 
-	} 
+#include <iostream> 
+#include <queue> 
+  
+using namespace std; 
+  
+void showq(queue <int> gq) 
+{ 
+    queue <int> g = gq; 
+    while (!g.empty()) 
+    { 
+        cout << '\t' << g.front(); 
+        g.pop(); 
+    } 
+    cout << '\n'; 
+} 
+  
+int main() 
+{ 
+    queue <int> gquiz; 
+    gquiz.push(10); 
+    gquiz.push(20); 
+    gquiz.push(30); 
+  
+    cout << "The queue gquiz is : "; 
+    showq(gquiz); 
+  
+    cout << "\ngquiz.size() : " << gquiz.size(); 
+    cout << "\ngquiz.front() : " << gquiz.front(); 
+    cout << "\ngquiz.back() : " << gquiz.back(); 
+  
+    cout << "\ngquiz.pop() : "; 
+    gquiz.pop(); 
+    showq(gquiz); 
+  
+    return 0; 
 } 
