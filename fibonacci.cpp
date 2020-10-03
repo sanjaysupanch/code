@@ -13,4 +13,5 @@ int main(){
         cout << fib(i) << " ";
     }
     return 0;
+    cout << "fibo in recursion";
 }
