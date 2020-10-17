@@ -1,5 +1,5 @@
 // C++ program for implementation 
-// of Iterative Heap Sort 
+// of Iterative heap Sort 
 #include <bits/stdc++.h> 
 using namespace std; 
 
