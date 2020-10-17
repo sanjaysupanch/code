@@ -1,4 +1,3 @@
-// C++ program for implementation 
 // of Iterative heap Sort 
 #include <bits/stdc++.h> 
 using namespace std; 
