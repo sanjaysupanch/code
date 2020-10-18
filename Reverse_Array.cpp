@@ -14,5 +14,5 @@ int main(){
     for (i=n-1; i>=0; i--)
         cout << a[i] << " ";
 
-    return 0;
+    return -1;
 }
