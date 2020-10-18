@@ -1,3 +1,4 @@
+#include<math.h>
 #include <stdio.h>
 int check_anagram(char [], char []);
 
