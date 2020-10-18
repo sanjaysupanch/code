@@ -1,4 +1,3 @@
-// C program for different tree traversals 
 #include <iostream> 
 using namespace std; 
 
@@ -13,8 +12,6 @@ struct Node
 	} 
 }; 
 
-/* Given a binary tree, print its nodes according to the 
-"bottom-up" postorder traversal. */
 void printPostorder(struct Node* node) 
 { 
 	if (node == NULL) 
